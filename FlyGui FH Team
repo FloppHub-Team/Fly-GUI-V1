@@ -138,7 +138,7 @@ nowe = false
 game:GetService("StarterGui"):SetCore("SendNotification", { 
 	Title = " | FLY GUI V1";
 	Text = "FloppHub Team On The Top ";
-	Icon = "rbxthumb://type=Asset&id=1125867988087077&w=150&h=150"})
+	Icon = "rbxthumb://type=Asset&id=112586798808707&w=150&h=150"})
 Duration = 10;
 
 Frame.Active = true -- main = gui
