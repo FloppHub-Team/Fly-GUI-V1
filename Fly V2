@@ -1,6 +1,6 @@
-local flySpeed = 10
+local flySpeed = 100
 local minSpeed = 1
-local maxSpeed = 1000
+local maxSpeed = 10000
 
 local ScreenGui = Instance.new("ScreenGui")
 ScreenGui.Name = "FlyControlGui"
