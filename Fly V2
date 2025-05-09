@@ -30,14 +30,22 @@ Duration = 10;
 
 local CloseButton = Instance.new("TextButton")
 CloseButton.Name = "CloseButton"
-CloseButton.Size = UDim2.new(0, 25, 0, 25)
-CloseButton.Position = UDim2.new(1, -30, 0, 5)
-CloseButton.BackgroundColor3 = Color3.fromRGB(200, 0, 0)
+CloseButton.Size = UDim2.new(0, 20, 0, 20)
+CloseButton.Position = UDim2.new(1, -25, 0, 5)
+CloseButton.BackgroundColor3 = Color3.fromRGB(255, 0, 0)
 CloseButton.TextColor3 = Color3.fromRGB(255, 255, 255)
 CloseButton.Text = "X"
 CloseButton.Font = Enum.Font.GothamBold
 CloseButton.TextSize = 14
 CloseButton.Parent = Frame
+
+local CloseButtonCorner = Instance.new("UICorner")
+CloseButtonCorner.CornerRadius = UDim.new(0, 5)
+CloseButtonCorner.Parent = CloseButton
+
+CloseButton.MouseButton1Click:Connect(function()
+    ScreenGui:Destroy()
+end)
 
 local CloseCorner = Instance.new("UICorner")
 CloseCorner.CornerRadius = UDim.new(0, 6)
