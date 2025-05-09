@@ -1,4 +1,4 @@
-local flySpeed = 60
+local flySpeed = 50
 local minSpeed = 1
 local maxSpeed = 1000
 
