@@ -28,6 +28,25 @@ game:GetService("StarterGui"):SetCore("SendNotification", {
 	Icon = "rbxthumb://type=Asset&id=112586798808707&w=150&h=150"})
 Duration = 10;
 
+local CloseButton = Instance.new("TextButton")
+CloseButton.Name = "CloseButton"
+CloseButton.Size = UDim2.new(0, 25, 0, 25)
+CloseButton.Position = UDim2.new(1, -30, 0, 5)
+CloseButton.BackgroundColor3 = Color3.fromRGB(200, 0, 0)
+CloseButton.TextColor3 = Color3.fromRGB(255, 255, 255)
+CloseButton.Text = "X"
+CloseButton.Font = Enum.Font.GothamBold
+CloseButton.TextSize = 14
+CloseButton.Parent = Frame
+
+local CloseCorner = Instance.new("UICorner")
+CloseCorner.CornerRadius = UDim.new(0, 6)
+CloseCorner.Parent = CloseButton
+
+CloseButton.MouseButton1Click:Connect(function()
+    ScreenGui:Destroy()
+end)
+
 local Title = Instance.new("TextLabel")
 Title.Name = "Title"
 Title.Size = UDim2.new(1, 0, 0, 30)
