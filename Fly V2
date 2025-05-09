@@ -22,6 +22,12 @@ local UICorner = Instance.new("UICorner")
 UICorner.CornerRadius = UDim.new(0, 8)
 UICorner.Parent = Frame
 
+game:GetService("StarterGui"):SetCore("SendNotification", { 
+	Title = " | FLY GUI V1";
+	Text = "FloppHub Team On The Top ";
+	Icon = "rbxthumb://type=Asset&id=112586798808707&w=150&h=150"})
+Duration = 10;
+
 local Title = Instance.new("TextLabel")
 Title.Name = "Title"
 Title.Size = UDim2.new(1, 0, 0, 30)
