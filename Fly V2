@@ -64,6 +64,29 @@ CloseButton.MouseButton1Click:Connect(function()
     ScreenGui:Destroy()
 end)
 
+local MinimizeButton = Instance.new("TextButton")
+MinimizeButton.Name = "MinimizeButton"
+MinimizeButton.Size = UDim2.new(0, 20, 0, 20)
+MinimizeButton.Position = UDim2.new(1, -50, 0, 5)
+MinimizeButton.BackgroundColor3 = Color3.fromRGB(70, 120, 255)
+MinimizeButton.BorderSizePixel = 0
+MinimizeButton.Text = "-"
+MinimizeButton.TextColor3 = Color3.fromRGB(255, 255, 255)
+MinimizeButton.Font = Enum.Font.GothamBold
+MinimizeButton.TextSize = 14
+MinimizeButton.Parent = Title
+
+local MinimizeButtonCorner = Instance.new("UICorner")
+MinimizeButtonCorner.CornerRadius = UDim.new(0, 10)
+MinimizeButtonCorner.Parent = MinimizeButton
+
+local MainContent = Instance.new("Frame")
+MainContent.Name = "MainContent"
+MainContent.Size = UDim2.new(1, 0, 1, -30)
+MainContent.Position = UDim2.new(0, 0, 0, 30)
+MainContent.BackgroundTransparency = 1
+MainContent.Parent = Frame
+
 local ToggleButton = Instance.new("TextButton")
 ToggleButton.Name = "ToggleButton"
 ToggleButton.Size = UDim2.new(0.9, 0, 0, 30)
@@ -139,6 +162,27 @@ SliderButton.Parent = SliderBar
 local SliderButtonCorner = Instance.new("UICorner")
 SliderButtonCorner.CornerRadius = UDim.new(0, 10)
 SliderButtonCorner.Parent = SliderButton
+
+local isMinimized = false
+
+local function toggleMinimize()
+    isMinimized = not isMinimized
+    
+    if isMinimized then
+        Frame.Size = UDim2.new(0, 200, 0, 30)
+        MainContent.Visible = false
+        MinimizeButton.Text = "+"
+    else
+        Frame.Size = UDim2.new(0, 200, 0, 150)
+        MainContent.Visible = true
+        MinimizeButton.Text = "-"
+    end
+end
+
+MinimizeButton.MouseButton1Click:Connect(toggleMinimize)
+CloseButton.MouseButton1Click:Connect(function()
+    ScreenGui:Destroy()
+end)
 
 local flying = false
 local flyConnection = nil
