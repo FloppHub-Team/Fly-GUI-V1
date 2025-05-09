@@ -23,7 +23,7 @@ UICorner.CornerRadius = UDim.new(0, 8)
 UICorner.Parent = Frame
 
 game:GetService("StarterGui"):SetCore("SendNotification", { 
-	Title = " | FLY GUI V1";
+	Title = " | FLY GUI V2";
 	Text = "FloppHub Team On The Top ";
 	Icon = "rbxthumb://type=Asset&id=112586798808707&w=150&h=150"})
 Duration = 10;
@@ -34,7 +34,7 @@ Title.Size = UDim2.new(1, 0, 0, 30)
 Title.Position = UDim2.new(0, 0, 0, 0)
 Title.BackgroundColor3 = Color3.fromRGB(30, 30, 30)
 Title.BorderSizePixel = 0
-Title.Text = "Fly GUI"
+Title.Text = "FLY GUI"
 Title.TextColor3 = Color3.fromRGB(200, 200, 200)
 Title.Font = Enum.Font.Gotham
 Title.TextSize = 14
